@@ -8,8 +8,14 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductsService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
   getAllProdouct(): Observable<any> {
-    return this.http.get(environment.baseApi+`products`)
+    return this.http.get(environment.baseApi + `products`)
+  }
+  getAllCategories(): Observable<any> {
+    return this.http.get(environment.baseApi + `products/categories`)
+  }
+  getProductsByCategory(keyword: string): Observable<any> {
+    return this.http.get(environment.baseApi + `products/category/` + keyword)
   }
 }

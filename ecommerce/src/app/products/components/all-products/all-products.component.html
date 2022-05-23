@@ -1,26 +1,16 @@
 <img src="../../../../assets/images/iPhone6-850x340.jpg" class="w-100" alt="">
+<!-- filter products -->
 <div class="py-3 w-50 m-auto container">
-    <label for="">Categories : </label>
-    <select class="form-control my-2">
-        <option value="1">option1</option>
-        <option value="2">option2</option>
-        <option value="3">option3</option>
-
-    </select>
+    <app-select [data]="categories" [title]="'Categories'" (selectedValue)="filterCategory($event)"></app-select>
 </div>
-
-<div class="row container m-auto">
+<!-- filter products -->
+<!-- start show all products -->
+<div class="row container m-auto" *ngIf="!loading">
     <div class="col-md-3" *ngFor="let item of products ; let i = index">
-        <div class="item">
-            <img src="{{item.image}}" alt="">
-            <div class="body">
-                <h4>{{item.title}}</h4>
-                <p>{{item.description}}</p>
-            </div>
-            <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
-                <button class="btn btn-success">Add To cart</button>
-                <span>{{item.price}}L.E</span>
-            </div>
-        </div>
+        <app-product [data]="item"></app-product>
     </div>
 </div>
+<div class="text-center m-auto w-100" *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+<!-- end show all products -->

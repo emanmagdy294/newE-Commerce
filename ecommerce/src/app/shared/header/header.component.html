@@ -1,11 +1,13 @@
-<nav>
-    <div class="container">
-        <div class="content">
-            <h2 class="logo">MARCET</h2>
-            <ul>
-                <li routerLink="products">Products</li>
-                <li routerLink="cart">Cart</li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<ul class="nav d-flex">
+    <li class="nav-item">
+        <a class="nav-link logo" aria-current="/">
+            <img src="../../../assets/images/logo_200x.webp" class="w-100 bg-black" alt="">
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="products" routerLinkActive="active">Products</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="cart" routerLinkActive="active">Cart</a>
+    </li>
+</ul>
