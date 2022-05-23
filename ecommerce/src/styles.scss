@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    padding: 0;
+    margin: 0 !important;
+}
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+// main font 
+*{
+    font-family: 'Playfair Display', serif; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.specialFont {
+  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Playfair Display SC', serif !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.special{
+font-family: 'Playfair Display SC', serif !important;
+}
