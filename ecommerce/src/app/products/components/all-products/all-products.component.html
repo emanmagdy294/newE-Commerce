@@ -1,4 +1,5 @@
-<div class="py-3 w-50 m-auto">
+<img src="../../../../assets/images/iPhone6-850x340.jpg" class="w-100" alt="">
+<div class="py-3 w-50 m-auto container">
     <label for="">Categories : </label>
     <select class="form-control my-2">
         <option value="1">option1</option>
@@ -7,22 +8,19 @@
 
     </select>
 </div>
-<div class="row m-auto">
-    <div class="col-md-3 mt-2">
+
+<div class="row container m-auto">
+    <div class="col-md-3" *ngFor="let item of products ; let i = index">
         <div class="item">
-            <img src="" alt="">
+            <img src="{{item.image}}" alt="">
             <div class="body">
-                <h4>Lorem, ipsum dolor.</h4>
-                <p>Lorem, ipsum dolor.</p>
+                <h4>{{item.title}}</h4>
+                <p>{{item.description}}</p>
             </div>
             <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
-                <button class="btn btn-success">Add To Cart</button>
-                <span>50 L.E</span>
+                <button class="btn btn-success">Add To cart</button>
+                <span>{{item.price}}L.E</span>
             </div>
         </div>
     </div>
-    <div class="col-md-3 mt-2"></div>
-    <div class="col-md-3 mt-2"></div>
-    <div class="col-md-3 mt-2"></div>
-
 </div>
