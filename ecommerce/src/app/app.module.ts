@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { CartsModule } from './carts/carts.module';
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent
@@ -18,7 +18,7 @@ import { SharedModule } from './shared/shared.module';
     ProductsModule,
     CartsModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

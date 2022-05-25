@@ -13,11 +13,13 @@
 <!-- filter products -->
 <!-- start show all products -->
 <div class="row container m-auto" *ngIf="!loading">
-    <div class="col-md-3" *ngFor="let item of products ; let i = index">
-        <app-product [data]="item"></app-product>
+    <div class="col-md-3" *ngFor="let item of products">
+        <app-product [data]="item" (item)="addToCart($event)"></app-product>
     </div>
 </div>
 <div class="text-center m-auto w-100" *ngIf="loading">
     <app-spinner></app-spinner>
 </div>
+
+
 <!-- end show all products -->

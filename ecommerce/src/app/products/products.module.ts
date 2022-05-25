@@ -4,6 +4,8 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductComponent } from './components/product/product.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { ProductComponent } from './components/product/product.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    RouterModule
   ]
 
 })
