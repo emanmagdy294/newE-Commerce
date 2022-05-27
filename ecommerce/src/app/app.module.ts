@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CartsModule } from './carts/carts.module';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     ProductsModule,
     CartsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]

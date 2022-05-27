@@ -5,8 +5,7 @@
     margin: 15px;
     display: inline-block;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(202, 37, 16, .3);
-    transition: all .3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(235, 231, 231, 0.3);
     cursor: pointer;
 
     img {
@@ -26,23 +25,27 @@
         padding: 5px 15px;
     }
 
-    h4 {
-        height: 75px;
-        padding: 5px 15px;
-        font-size: 18px;
-        overflow: hidden;
-        background-color: #eee;
-        font-weight: 600;
-        margin-top: 10px;
-    }
-
-    &:hover {
-        transform: scale(1.1);
-    }
-
     span {
-        background-color: #f1b4b4;
-        padding: 3px 7px;
-        border-radius: 30px;
+        color: #a70909;
+        font-weight: bolder;
     }
+}
+
+input {
+    background-color: transparent !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+    border-bottom-color: rgb(99, 98, 98) !important;
+    color: black !important;
+
+}
+
+input:focus {
+    box-shadow: none !important;
+    border-bottom-color: rgb(197, 151, 13) !important;
+}
+.add:hover{
+    color: rgb(197, 151, 13);
 }

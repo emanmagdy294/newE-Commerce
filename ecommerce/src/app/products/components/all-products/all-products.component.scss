@@ -1,6 +1,81 @@
 @import "../../../../scss/variables";
-.caption{
+
+.commonStylesBackground {
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    background-attachment: fixed;
+}
+
+.caption {
     position: absolute;
     top: 40%;
     left: 10%;
+}
+
+.bg {
+    background-image: url(../../../../assets/images/parallax.webp);
+    @extend .commonStylesBackground
+}
+
+.layout {
+    background-color: rgba(0, 0, 0, .3);
+    background-attachment: fixed;
+    @extend .commonStylesBackground
+}
+
+.commonStyleCaption {
+    font-family: $specialFont;
+    font-style: italic;
+}
+
+.address {
+    color: $mainColor;
+}
+
+.bg>.layout>.text-center>p {
+    font-size: 7vw;
+    color: white;
+    font-style: italic;
+    transition: .5s;
+}
+
+.bg>.layout>.text-center>p:hover {
+    letter-spacing: 3px;
+    cursor: none;
+    transition: .5s;
+    color: white;
+    font-style: italic;
+}
+
+.buttonStyle {
+    color: white;
+    background-color: #000;
+    border: none;
+    transition: all .3s unset;
+}
+
+.buttonStyle:hover {
+    color: white;
+    background-color: $mainColor;
+}
+
+.sale {
+    color: #a70909;
+}
+
+.parentImage {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+}
+
+.childBannerTwo {
+    position: absolute;
+    left: 10px;
+    top: 30%;
 }

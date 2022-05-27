@@ -1,11 +1,10 @@
 <div class="position-relative">
-    <img src="../../../../assets/images/slider-01_d7be020a-6491-4777-8ec0-859f2eb4ba72.webp" class="w-100" alt="">
+    <img src="assets/images/slider-01_d7be020a-6491-4777-8ec0-859f2eb4ba72.webp" class="w-100" alt="">
     <div class="caption">
-        <h3 class="specialFont text-center">FASHION SHOP</h3>
+        <h3 class="commonStyleCaption">FASHION SHOP</h3>
         <h1 class="specialFont fw-bolder">PETER SHOP</h1>
     </div>
 </div>
-
 <!-- filter products -->
 <div class="py-3 w-50 m-auto container">
     <app-select [data]="categories" [title]="'Categories'" (selectedValue)="filterCategory($event)"></app-select>
@@ -16,10 +15,51 @@
     <div class="col-md-3" *ngFor="let item of products">
         <app-product [data]="item" (item)="addToCart($event)"></app-product>
     </div>
+    <div class="my-4 d-flex justify-content-between align-items-center">
+        <button class="buttonStyle py-2 px-4" (click)='showAll()'>show all products
+        </button>
+        <button class="buttonStyle py-2 px-4" (click)='showLesss()'>show less products
+        </button>
+    </div>
 </div>
 <div class="text-center m-auto w-100" *ngIf="loading">
     <app-spinner></app-spinner>
 </div>
-
-
 <!-- end show all products -->
+<div class="bg">
+    <div class="layout d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h2 class="commonStyleCaption address pb-4">Exclusive Collection</h2>
+            <p>Get 25% Off</p>
+        </div>
+    </div>
+</div>
+<!-- owl-carsoul -->
+<div class="container my-5">
+    <h2 class="text-center fw-bolder commonStyleCaption pb-3"># Soon Products #</h2>
+    <ng-image-slider [images]="imgCollection" #nav></ng-image-slider>
+</div>
+<!-- end owl-carsoul -->
+<div class="row container m-auto pb-3">
+    <div class="col-md-6 mt-2">
+        <div class="parentImage text-center">
+            <img src="assets/images/banner-01.webp" class="w-100" alt="clothes">
+            <div class="child">
+                <h2 class="commonStyleCaption fw-bolder">Stylish Shop</h2>
+                <h4 class="commonStyleCaption sale my-1">SALE FLAT 50% OFF</h4>
+                <button class="buttonStyle py-2 px-4">Shop Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mt-2">
+        <div class="parentImage text-center">
+            <img src="assets/images/banner-02.webp" class="w-100" alt="clothes">
+            <div class="childBannerTwo">
+                <h2 class="commonStyleCaption fw-bolder">Stylish Shop</h2>
+                <h4 class="commonStyleCaption sale my-1">SALE FLAT 50% OFF</h4>
+                <button class="buttonStyle py-2 px-4">Shop Now</button>
+            </div>
+        </div>
+    </div>
+
+</div>

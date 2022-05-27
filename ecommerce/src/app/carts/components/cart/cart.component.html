@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container-fluid">
     <div class="cartBox">
-        <h1 class="text-danger special">Shopping Cart</h1>
-        <div class="headCart">
+        <h1 class="special">Shopping Cart</h1>
+        <div class="headCart d-flex justify-content-between align-items-center flex-wrap">
             <p class="lead">You have<label class="text-success fw-bolder px-2 special"> {{cartProducts.length}}
                 </label>item in your cart</p>
             <span class="card-header" (click)="clearCart()">Clear Shopping Cart</span>
@@ -9,9 +9,10 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Image</th>
                     <th>Name</th>
                     <th>Price</th>
-                    <th style="width:25%;">Quantity</th>
+                    <th>Quantity</th>
                     <th>Totle</th>
                     <th></th>
                 </tr>
@@ -20,7 +21,7 @@
                 <tr *ngFor="let item of cartProducts ; let index=index">
                     <td><img src="{{item.item.image}}" alt=""></td>
                     <td>{{item.item.title}}</td>
-                    <td>{{item.item.price}} LE</td>
+                    <td class="text-danger">{{item.item.price}} LE</td>
                     <td>
                         <div class="quantity">
                             <button class="btn btn-dark" (click)="addAmount(index)">+</button>
@@ -35,20 +36,12 @@
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>Total : {{total}} LE</th>
-                    <th>
-                        <button class="btn btn-success" (click)="addCart()">Order Now</button>
-                    </th>
 
-                </tr>
-            </tfoot>
         </table>
+        <div class="d-flex justify-content-between py-3">
+            <p><strong>Total</strong> : {{total}} LE</p>
+            <button class="buttonStyle px-5 py-1 bg-dark" (click)="addCart()">Order Now</button>
+        </div>
     </div>
     <div class="alert alert-success" role="alert" *ngIf="success">
         <strong>Well Done</strong>

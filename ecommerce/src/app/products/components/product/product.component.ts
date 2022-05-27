@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product',
@@ -7,17 +8,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   // parent to share data projects
-  @Input() data: any = {};
+  @Input() data!: Product;
   // share child to add to cart
   @Output() item = new EventEmitter();
-  addButton:boolean=false;
-  amount:number = 0
+  addButton: boolean = false;
+  amount: number = 0
   constructor() { }
 
   ngOnInit(): void {
   }
 
   add() {
-    this.item.emit({item:this.data , quantity:this.amount})
+    this.item.emit({ item: this.data, quantity: this.amount })
   }
 }

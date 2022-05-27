@@ -1,17 +1,24 @@
 <div class="row container" *ngIf="!loading">
-    <div class="col-md-4 mt-2">
+    <div class="col-md-5 mt-4">
         <img src="{{data.image}}" class="w-100" alt="">
     </div>
-    <div class="col-md-8 mt-2">
+    <div class="col-md-7 mt-4">
         <div class="info">
-            <ul class="list-unstyled">
-                <li><strong>title</strong>{{data.title}}</li>
-                <li><strong>title</strong>{{data.category}}</li>
-                <li><strong>title</strong>{{data.description}}</li>
-                <li><strong>title</strong>{{data.rating.rate}}</li>
-                <li><strong>title</strong>{{data.rating.count}}</li>
-                <li><strong>title</strong>{{data.price}} LE</li>
+            <div class="text-center py-4">
+                <h1 class="special">{{data.title}}</h1>
+                <hr>
+            </div>
+            <p class="text-muted">{{data.description}}</p>
+            <ul class="list-unstyled" style="line-height: 2rem;">
+                <li><strong>Category</strong> : {{data.category}}</li>
+                <li><strong>Rate</strong> : {{data.rating.rate}}</li>
+                <li><strong>Count</strong> : {{data.rating.count}}</li>
+                <li><strong>Price</strong> : {{data.price}} LE</li>
             </ul>
+        </div>
+
+        <div class="my-5">
+            <button class="btn" routerLink="/products">Continue Shopping</button>
         </div>
     </div>
     <div class="text-center">

@@ -1,0 +1,49 @@
+.bgFooter {
+    background-color: #171717;
+    color: #fff;
+}
+
+li {
+    transition: .3s;
+}
+
+li:hover {
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.layoutFooter{
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    z-index: 9;
+}
+.signup{
+    font-size: 2vw;
+}
+
+input{
+    background-color: transparent !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+    border-bottom-color: rgb(99, 98, 98)!important;
+    color: white !important;
+
+}
+input:focus{
+    box-shadow: none !important;
+    border-bottom-color: white !important;
+}
+button{
+    background-color: rgb(221, 148, 12);
+    color: white;
+    border: none;
+}
+.parent{
+    position: relative;
+}
+.child{
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
