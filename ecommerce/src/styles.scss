@@ -48,10 +48,13 @@ body {
     bottom: 0;
     padding: 5px;
     color: gray !important;
-    background-image:none !important;
+    background-image: none !important;
     font-family: $specialFont;
 }
 
+.slider-two>.ng-image-slider>.caption {
+    color: rgb(9, 8, 8) !important;
+}
 
 
 .buttonStyle {
@@ -64,4 +67,10 @@ body {
 .buttonStyle:hover {
     color: white;
     background-color: $mainColor;
+}
+
+input,
+textarea,
+button {
+    box-shadow: none !important;
 }

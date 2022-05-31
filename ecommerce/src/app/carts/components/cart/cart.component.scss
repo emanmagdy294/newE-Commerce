@@ -1,18 +1,23 @@
 @import "../../../../scss/variables";
-.special{
-    color:$mainColor;
+
+.special {
+    color: $mainColor;
 }
+
 .cartBox {
     border: 1px solid #DDD;
     border-radius: 5px;
     padding: 0 20px;
     overflow-x: auto;
+
     .table {
         .quantity {
             display: flex;
             justify-content: space-between;
+
             input {
                 margin: 0 10px;
+                width: 200px;
             }
         }
 
@@ -57,4 +62,8 @@
             }
         }
     }
+}
+input:focus{
+   background-color: rgb(222, 220, 220);
+   border: none !important;
 }

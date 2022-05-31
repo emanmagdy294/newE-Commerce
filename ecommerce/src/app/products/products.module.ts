@@ -6,7 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { NgImageSliderModule } from 'ng-image-slider';
 @NgModule({
   declarations: [
     AllProductsComponent,
@@ -18,7 +17,6 @@ import { NgImageSliderModule } from 'ng-image-slider';
     SharedModule,
     FormsModule,
     RouterModule,
-    NgImageSliderModule
   ]
 
 })

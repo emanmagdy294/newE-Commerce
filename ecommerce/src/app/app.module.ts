@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
@@ -8,10 +7,15 @@ import { SharedModule } from './shared/shared.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CartsModule } from './carts/carts.module';
 import { FormsModule } from '@angular/forms';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AboutComponent } from './components/about/about.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactUsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     ProductsModule,
     CartsModule,
     FormsModule,
+    NgImageSliderModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
