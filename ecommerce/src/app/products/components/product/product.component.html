@@ -6,12 +6,12 @@
                 <h6>{{data.title}}</h6>
                 <i class="fas fa-eye" style="color: rgb(203, 202, 200);"></i>
             </div>
-            <p class="text-muted">{{data.description}}</p>
+            <p class="text-muted" style="padding-left: 0 !important;">  {{data.description}}</p>
         </div>
     </div>
     <hr>
     <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
-        <button class="btn" *ngIf="!addButton" (click)="addButton=true">Add To cart +</button>
+        <button class="btn btnAdd" *ngIf="!addButton" (click)="addButton=true">Add To cart +</button>
         <div class="d-flex w-50" *ngIf="addButton">
             <input type="number" class="form-control" min="1" [(ngModel)]="amount">
             <button class="btn add" (click)="add();addButton=false">

@@ -14,18 +14,18 @@ export class OwlCarsoulComponent implements OnInit {
   // owl carsoul
   imgCollection: Array<object> = [
     {
-      image: 'assets/images/image1.webp',
-      thumbImage: 'assets/images/image1.webp',
+      image: '/assets/images/image1.webp',
+      thumbImage: '/assets/images/image1.webp',
       alt: 'lorem ipsum',
       title: 'lorem ipsum'
     }, {
-      image: 'assets/images/image2.webp',
-      thumbImage: 'assets/images/image2.webp',
+      image: './assets/images/image2.webp',
+      thumbImage: './assets/images/image2.webp',
       title: 'T-Shirt',
       alt: 'T-Shirt'
     }, {
-      image: 'assets/images/image3.webp',
-      thumbImage: 'assets/images/image3.webp',
+      image: '../assets/images/image3.webp',
+      thumbImage: '../assets/images/image3.webp',
       title: 'Lorem, ipsum',
       alt: 'Lorem, ipsum'
     }, {

@@ -1,5 +1,5 @@
 <label for="">{{title}} : </label>
-<select class="form-control my-2" (change)="detectChanges($event)">
+<select class="form-control w-100" (change)="detectChanges($event)">
     <option value="all" selected>ALL</option>
     <option value="{{option}}" *ngFor="let option of data">{{option}}</option>
 </select>

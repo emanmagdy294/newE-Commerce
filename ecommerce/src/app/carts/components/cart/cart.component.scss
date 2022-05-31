@@ -67,3 +67,6 @@ input:focus{
    background-color: rgb(222, 220, 220);
    border: none !important;
 }
+input:invalid{
+    border: 2px solid red;
+}
