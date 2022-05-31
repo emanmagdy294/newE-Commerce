@@ -14,39 +14,39 @@ export class OwlCarsoulComponent implements OnInit {
   // owl carsoul
   imgCollection: Array<object> = [
     {
-      image: '../../../../assets/images/image1.webp',
-      thumbImage: '../../../../assets/images/image1.webp',
+      image: 'assets/images/image1.webp',
+      thumbImage: 'assets/images/image1.webp',
       alt: 'lorem ipsum',
       title: 'lorem ipsum'
     }, {
-      image: '../../../../assets/images/image2.webp',
-      thumbImage: '../../../../assets/images/image2.webp',
+      image: 'assets/images/image2.webp',
+      thumbImage: 'assets/images/image2.webp',
       title: 'T-Shirt',
       alt: 'T-Shirt'
     }, {
-      image: '../../../../assets/images/image3.webp',
-      thumbImage: '../../../../assets/images/image3.webp',
+      image: 'assets/images/image3.webp',
+      thumbImage: 'assets/images/image3.webp',
       title: 'Lorem, ipsum',
       alt: 'Lorem, ipsum'
     }, {
-      image: '../../../../assets/images/image4.webp',
-      thumbImage: '../../../../assets/images/image4.webp',
+      image: 'assets/images/image4.webp',
+      thumbImage: 'assets/images/image4.webp',
       title: 'Ipsum Simply',
       alt: 'Ipsum Simply'
     }, {
-      image: '../../../../assets/images/image5.webp',
-      thumbImage: '../../../../assets/images/image5.webp',
+      image: 'assets/images/image5.webp',
+      thumbImage: 'assets/images/image5.webp',
       title: 'lorem',
       alt: 'lorem'
     }, {
-      image: '../../../../assets/images/image6.webp',
-      thumbImage: '../../../../assets/images/image6.webp',
+      image: 'assets/images/image6.webp',
+      thumbImage: 'assets/images/image6.webp',
       title: 'dolor sit',
       alt: 'dolor sit'
     }
     , {
-      image: '../../../../assets/images/image7.webp',
-      thumbImage: '../../../../assets/images/image7.webp',
+      image: 'assets/images/image7.webp',
+      thumbImage: 'assets/images/image7.webp',
       title: 'consectetur adipisicing',
       alt: 'consectetur adipisicing'
     }
