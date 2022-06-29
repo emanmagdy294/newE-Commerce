@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwiperOptions } from 'swiper';
 import { Product } from '../../models/product';
 import { ProductsService } from '../../services/products.service';
 
@@ -13,7 +14,17 @@ export class AllProductsComponent implements OnInit {
   loading: boolean = false;
   cartProducts: any[] = [];
   constructor(private service: ProductsService) { }
-
+  config: SwiperOptions = {
+    pagination: { 
+      el: '.swiper-pagination', 
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30
+  }; 
   ngOnInit(): void {
     this.getProducts();
     this.getCategories();

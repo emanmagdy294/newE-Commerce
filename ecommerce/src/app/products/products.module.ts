@@ -6,6 +6,8 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+
 @NgModule({
   declarations: [
     AllProductsComponent,
@@ -17,6 +19,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     FormsModule,
     RouterModule,
+    NgxUsefulSwiperModule
   ]
 
 })

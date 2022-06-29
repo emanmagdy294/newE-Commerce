@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AboutComponent } from './components/about/about.component';
 import { NgImageSliderModule } from 'ng-image-slider';
-
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     ProductsModule,
     CartsModule,
     FormsModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    NgxUsefulSwiperModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
