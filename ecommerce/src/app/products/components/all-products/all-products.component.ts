@@ -9,14 +9,15 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./all-products.component.scss']
 })
 export class AllProductsComponent implements OnInit {
+  about: any[] = [];
   products: Product[] = [];
   categories: string[] = [];
   loading: boolean = false;
   cartProducts: any[] = [];
   constructor(private service: ProductsService) { }
   config: SwiperOptions = {
-    pagination: { 
-      el: '.swiper-pagination', 
+    pagination: {
+      el: '.swiper-pagination',
       clickable: true
     },
     navigation: {
@@ -24,8 +25,9 @@ export class AllProductsComponent implements OnInit {
       prevEl: '.swiper-button-prev'
     },
     spaceBetween: 30
-  }; 
+  };
   ngOnInit(): void {
+    this.getAbout()
     this.getProducts();
     this.getCategories();
   }
@@ -41,7 +43,7 @@ export class AllProductsComponent implements OnInit {
       console.log(error.message)
     })
   }
-  showAll(){
+  showAll() {
     this.loading = true;
     this.service.getAllProdouct().subscribe((res: any) => {
       this.products = res;
@@ -51,7 +53,7 @@ export class AllProductsComponent implements OnInit {
       console.log(error.message)
     })
   }
-  showLesss(){
+  showLesss() {
     this.loading = true;
     this.service.getAllProdouct().subscribe((res: any) => {
       this.products = res;
@@ -99,5 +101,15 @@ export class AllProductsComponent implements OnInit {
     }
   }
 
+  getAbout() {
+    this.service.getAbout().subscribe((res: any) => {
+      this.about = res.data
+      console.log(res.data);
+      
+    },
+    (err) => {
+      console.log('about', err);
 
+    })
+  }
 }
